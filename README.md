@@ -70,8 +70,8 @@ Registers a new user with a username, email, and password.
        "success": true
    }
 - Error Response:
- - Status: 400 Bad Request
- - Response Body:
+  - Status: 400 Bad Request
+  - Response Body:
    ```json
    {
      "statusCode": 400,
@@ -83,15 +83,15 @@ Registers a new user with a username, email, and password.
 Logs in a registered user with their email and password.
 
 - Endpoint: POST /api/login
- - Request Body:
+  - Request Body:
    ```json
    {
        "email": "arshan@gmail.com",
        "password": "12345"
    }
 - Success Response:
- - Status: 200 OK
- - Response Body:
+  - Status: 200 OK
+  - Response Body:
    ```json
    {
        "statusCode": 200,
@@ -108,8 +108,8 @@ Logs in a registered user with their email and password.
        "success": true
    }
 - Error Response:
- - Status: 401 Unauthorized
- - Response Body:
+  - Status: 401 Unauthorized
+  - Response Body:
    ```json
    {
      "statusCode": 401,
