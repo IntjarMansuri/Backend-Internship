@@ -47,13 +47,13 @@ This project implements a set of RESTful APIs for user authentication using Node
 Registers a new user with a username, email, and password.
 
 - Endpoint: POST /api/signup
-- Request Body:
-  ```json
-  {
-    "username": "Arshan",
-    "email": "arshan@gmail.com",
-    "password": "12345"
-}
+   - Request Body:
+     ```json
+     {
+       "username": "Arshan",
+       "email": "arshan@gmail.com",
+       "password": "12345"
+     }
 - Success Response:
   - Status: 201 Created
   - Response Body:
@@ -68,16 +68,17 @@ Registers a new user with a username, email, and password.
        },
        "message": "User signup successfully!",
        "success": true
-   }
+    }
+  
 - Error Response:
   - Status: 400 Bad Request
   - Response Body:
     ```json
-      {
-        "statusCode": 400,
-        "message": "Password must be at least 5 characters long.",
-        "success": false
-      }
+    {
+      "statusCode": 400,
+      "message": "Password must be at least 5 characters long.",
+      "success": false
+    }
    
 ### User Login
 Logs in a registered user with their email and password.
@@ -93,7 +94,7 @@ Logs in a registered user with their email and password.
   - Status: 200 OK
   - Response Body:
     ```json
-   {
+    {
        "statusCode": 200,
        "data": {
            "user": {
@@ -102,20 +103,21 @@ Logs in a registered user with their email and password.
                "email": "arshan@gmail.com",
                "__v": 0
            },
-           "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjdhODUwYWZiZTYzMjQ2ZDhhZWE2ZTEiLCJlbWFpbCI6ImFyc2hhbkBnbWFpbC5jb20iLCJ1c2VybmFtZSI6IkFyc2hhbiIsImlhdCI6MTcxOTMwNTQ5MSwiZXhwIjoxNzE5MzkxODkxfQ.C2jvCB2QKkykNbS8Ruv7cvFgMzDwOPOIiCQM7DjrvDQ"
+          "accessToken":       "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjdhODUwYWZiZTYzMjQ2ZDhhZWE2ZTEiLCJlbWFpbCI6ImFyc2hhbkBnbWFpbC5jb20iLCJ1c2VybmFtZSI6IkFyc2hhbiIsImlhdCI6MTcxOTMwNTQ5MSwiZXhwIjoxNzE5MzkxODkxfQ.C2jvCB2QKkykNbS8Ruv7cvFgMzDwOPOIiCQM7DjrvDQ"
        },
        "message": "User logged in successfully",
        "success": true
-   }
+    }
+    
 - Error Response:
   - Status: 401 Unauthorized
   - Response Body:
     ```json
-   {
-     "statusCode": 401,
-     "message": "Invalid user credentials",
-     "success": false
-   }
+      {
+        "statusCode": 401,
+        "message": "Invalid user credentials",
+        "success": false
+      }
 
 
 
