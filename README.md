@@ -118,6 +118,35 @@ Logs in a registered user with their email and password.
         "message": "Invalid user credentials",
         "success": false
       }
+### User Profile
+Retrieves the profile information of the authenticated user.
 
+- Endpoint: GET /api/profile
+- Headers:
+   ```makefile
+   Authorization: Bearer <accessToken>
 
-
+- Success Response:
+  - Status: 200 OK
+  - Response Body:
+    ```json
+    {
+       "statusCode": 200,
+       "data": {
+           "_id": "667a850afbe63246d8aea6e1",
+           "username": "Arshan",
+           "email": "arshan@gmail.com",
+           "__v": 0
+       },
+       "message": "User profile retrieved successfully",
+       "success": true
+    }
+- Error Response:
+  - Status: 401 Unauthorized
+  - Response Body:
+    ```json
+   {
+     "statusCode": 401,
+     "message": "Invalid access token",
+     "success": false
+   }
