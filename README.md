@@ -23,5 +23,5 @@ This project implements a set of RESTful APIs for user authentication using Node
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/your/repository.git
-   cd repository-name
+   git clone https://github.com/IntjarMansuri/Backend-Internship.git
+   cd Task - 1
