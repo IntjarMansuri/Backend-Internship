@@ -72,27 +72,27 @@ Registers a new user with a username, email, and password.
 - Error Response:
   - Status: 400 Bad Request
   - Response Body:
-   ```json
-   {
-     "statusCode": 400,
-     "message": "Password must be at least 5 characters long.",
-     "success": false
-   }
+    ```json
+      {
+        "statusCode": 400,
+        "message": "Password must be at least 5 characters long.",
+        "success": false
+      }
    
 ### User Login
 Logs in a registered user with their email and password.
 
 - Endpoint: POST /api/login
   - Request Body:
-   ```json
-   {
-       "email": "arshan@gmail.com",
-       "password": "12345"
-   }
+    ```json
+    {
+      "email": "arshan@gmail.com",
+      "password": "12345"
+    }
 - Success Response:
   - Status: 200 OK
   - Response Body:
-   ```json
+    ```json
    {
        "statusCode": 200,
        "data": {
@@ -110,7 +110,7 @@ Logs in a registered user with their email and password.
 - Error Response:
   - Status: 401 Unauthorized
   - Response Body:
-   ```json
+    ```json
    {
      "statusCode": 401,
      "message": "Invalid user credentials",
