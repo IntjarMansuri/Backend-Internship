@@ -17,3 +17,11 @@ This project implements a set of RESTful APIs for user authentication using Node
 3. **User Profile**
    - Endpoint: `GET /api/profile`
    - Retrieves and displays the user's profile information based on the provided JWT.
+
+### Development Environment Setup
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/your/repository.git
+   cd repository-name
