@@ -124,7 +124,7 @@ Retrieves the profile information of the authenticated user.
 - Endpoint: GET /api/profile
 - Headers:
    ```makefile
-   Authorization: Bearer <accessToken>
+   Authorization: Bearer < eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjdhODUwYWZiZTYzMjQ2ZDhhZWE2ZTEiLCJlbWFpbCI6ImFyc2hhbkBnbWFpbC5jb20iLCJ1c2VybmFtZSI6IkFyc2hhbiIsImlhdCI6MTcxOTMwNTQ5MSwiZXhwIjoxNzE5MzkxODkxfQ.C2jvCB2QKkykNbS8Ruv7cvFgMzDwOPOIiCQM7DjrvDQ >
 
 - Success Response:
   - Status: 200 OK
@@ -141,12 +141,13 @@ Retrieves the profile information of the authenticated user.
        "message": "User profile retrieved successfully",
        "success": true
     }
+    
 - Error Response:
   - Status: 401 Unauthorized
   - Response Body:
     ```json
-   {
-     "statusCode": 401,
-     "message": "Invalid access token",
-     "success": false
-   }
+    {
+      "statusCode": 401,
+      "message": "Invalid access token",
+      "success": false
+    }
