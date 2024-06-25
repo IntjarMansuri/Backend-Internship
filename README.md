@@ -18,7 +18,7 @@ This project implements a set of RESTful APIs for user authentication using Node
    - Endpoint: `GET /api/profile`
    - Retrieves and displays the user's profile information based on the provided JWT.
 
-### Development Environment Setup
+## Development Environment Setup
 
 1. **Clone the repository:**
 
@@ -41,3 +41,41 @@ This project implements a set of RESTful APIs for user authentication using Node
    ```bash
    npm run dev
 5. The server should now be running on http://localhost:8000.
+   
+## API Usage Guide
+### User Signup
+Registers a new user with a username, email, and password.
+
+- Endpoint: POST /api/signup
+- Request Body:
+  ```json
+  {
+     "username": "exampleuser",
+     "email": "user@example.com",
+     "password": "password"
+  }
+- Success Response:
+  - Status: 201 Created
+  - Response Body:
+    ```json
+    {
+     "statusCode": 200,
+     "data": {
+       "username": "exampleuser",
+       "email": "user@example.com"
+     },
+     "message": "User signup successfully!",
+     "success": true
+   }
+- Error Response:
+ - Status: 400 Bad Request
+ - Response Body:
+   ```json
+   {
+     "statusCode": 400,
+     "message": "Password must be at least 5 characters long.",
+     "success": false
+   }
+
+
+
