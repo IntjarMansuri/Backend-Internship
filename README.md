@@ -59,16 +59,16 @@ Registers a new user with a username, email, and password.
   - Response Body:
     ```json
     {
-    "statusCode": 200,
-    "data": {
-        "_id": "667a850afbe63246d8aea6e1",
-        "username": "Arshan",
-        "email": "arshan@gmail.com",
-        "__v": 0
-    },
-    "message": "User signup successfully!",
-    "success": true
-}
+       "statusCode": 200,
+       "data": {
+           "_id": "667a850afbe63246d8aea6e1",
+           "username": "Arshan",
+           "email": "arshan@gmail.com",
+           "__v": 0
+       },
+       "message": "User signup successfully!",
+       "success": true
+   }
 - Error Response:
  - Status: 400 Bad Request
  - Response Body:
@@ -76,6 +76,44 @@ Registers a new user with a username, email, and password.
    {
      "statusCode": 400,
      "message": "Password must be at least 5 characters long.",
+     "success": false
+   }
+   
+### User Login
+Logs in a registered user with their email and password.
+
+- Endpoint: POST /api/login
+ - Request Body:
+   ```json
+   {
+       "email": "arshan@gmail.com",
+       "password": "12345"
+   }
+- Success Response:
+ - Status: 200 OK
+ - Response Body:
+   ```json
+   {
+       "statusCode": 200,
+       "data": {
+           "user": {
+               "_id": "667a850afbe63246d8aea6e1",
+               "username": "Arshan",
+               "email": "arshan@gmail.com",
+               "__v": 0
+           },
+           "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjdhODUwYWZiZTYzMjQ2ZDhhZWE2ZTEiLCJlbWFpbCI6ImFyc2hhbkBnbWFpbC5jb20iLCJ1c2VybmFtZSI6IkFyc2hhbiIsImlhdCI6MTcxOTMwNTQ5MSwiZXhwIjoxNzE5MzkxODkxfQ.C2jvCB2QKkykNbS8Ruv7cvFgMzDwOPOIiCQM7DjrvDQ"
+       },
+       "message": "User logged in successfully",
+       "success": true
+   }
+- Error Response:
+ - Status: 401 Unauthorized
+ - Response Body:
+   ```json
+   {
+     "statusCode": 401,
+     "message": "Invalid user credentials",
      "success": false
    }
 
