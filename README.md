@@ -50,23 +50,25 @@ Registers a new user with a username, email, and password.
 - Request Body:
   ```json
   {
-     "username": "exampleuser",
-     "email": "user@example.com",
-     "password": "password"
-  }
+    "username": "Arshan",
+    "email": "arshan@gmail.com",
+    "password": "12345"
+}
 - Success Response:
   - Status: 201 Created
   - Response Body:
     ```json
     {
-     "statusCode": 200,
-     "data": {
-       "username": "exampleuser",
-       "email": "user@example.com"
-     },
-     "message": "User signup successfully!",
-     "success": true
-   }
+    "statusCode": 200,
+    "data": {
+        "_id": "667a850afbe63246d8aea6e1",
+        "username": "Arshan",
+        "email": "arshan@gmail.com",
+        "__v": 0
+    },
+    "message": "User signup successfully!",
+    "success": true
+}
 - Error Response:
  - Status: 400 Bad Request
  - Response Body:
