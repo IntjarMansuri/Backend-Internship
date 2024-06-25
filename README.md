@@ -1,4 +1,4 @@
-# User Authentication APIs
+# Task-1 User Authentication APIs
 
 This project implements a set of RESTful APIs for user authentication using Node.js, Express.js, MongoDB, and JSON Web Tokens (JWT).
 
