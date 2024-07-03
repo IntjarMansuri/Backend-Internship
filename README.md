@@ -1,4 +1,4 @@
-# Task-1 User Authentication APIs
+# Task-1: User Authentication APIs
 
 This project implements a set of RESTful APIs for user authentication using Node.js, Express.js, MongoDB, and JSON Web Tokens (JWT).
 
@@ -151,3 +151,4 @@ Retrieves the profile information of the authenticated user.
       "message": "Invalid access token",
       "success": false
     }
+# Task-2: Send Confirmaton Email after Signup
